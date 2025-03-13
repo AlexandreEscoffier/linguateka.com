@@ -1,0 +1,164 @@
+@media (max-width: 699px) {
+    .frenchText, .translationText {
+        max-width: 90%; /* Adaptation automatique */
+        margin: -40px auto;
+        padding: 10px;
+        text-align: left;
+        display: block;
+        word-wrap: break-word;
+        position: relative !important; /* Écrase le positionnement absolu */
+    }
+
+    .frenchText h2, .translationTextUpper h2 {
+        font-size: 20px;
+    }
+
+    .frenchText p, .translationText p {
+        color: #000080;
+        font-size: 17px;
+    }
+
+    .translation-buttons {
+        display: flex;
+        justify-content: left;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    /* Vidéo responsive */
+    .video-container {
+        width: 100%;
+        max-width: 600px;
+        min-height: 500px;
+        overflow: hidden;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: auto;
+        min-height: 550px;
+        transform: scale(0.9); /* Réduit la taille de l'iframe */
+    }
+
+    .translation-buttons {
+        display: flex;
+        justify-content: left !important;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        position: relative; /* S'assure qu'il reste en bas du contenu */
+        bottom: 0;
+        margin-top: 30px; /* Pousse le footer en bas si le contenu est trop court */
+    }
+    
+    
+}
+
+@media (min-width: 1200px) {
+
+    /* Conteneur text-wrapper */
+    .text-wrapper {
+        position: absolute; /* Positionnement absolu */
+        top: 0; /* En haut de la page */
+        right: 0; /* À droite de la page */
+        display: flex;
+        flex-direction: column; /* Aligne les divs verticalement */
+        align-items: flex-end; /* Aligne les éléments à droite */
+        gap: 20px; /* Espacement entre les deux divs */
+        padding: 10px; /* Espace intérieur */
+        max-width: 50%; /* Limite la largeur du conteneur */
+    }
+
+    /* Styles des divs à l'intérieur */
+    .frenchText, .translationText {
+        max-width: 100%; /* S'assure que les divs prennent toute la largeur disponible */
+        text-align: left; /* Aligne le texte à gauche */
+        margin: 0; /* Retirer les marges */
+        align-self: flex-start;
+    }
+
+    .frenchText h2, .translationTextUpper h2 {
+        font-size: 26px; /* Taille des titres */
+    }
+
+    .frenchText p, .translationText p {
+        color: #000080;
+        font-size: 22px;
+        
+    }
+
+    .translation-buttons {
+        display: flex;
+        justify-content: flex-start;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    /* Vidéo responsive */
+    .video-container {
+        width: 100%; /* La vidéo prend toute la largeur disponible */
+        max-width: 600px; /* Limite la largeur de la vidéo */
+    }
+
+    .video-container iframe {
+        width: 100%; /* L'iframe prend 100% de la largeur du conteneur */
+        height: 800px;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+    }
+
+    .footer {
+        background-color: #222;
+        color: white;
+        text-align: center;
+        padding: 15px;
+        border-top: 3px solid #ffcc00;
+        width: 100%;
+        display: block;
+        position: relative;
+        margin-top: auto; /* Pousse le footer en bas si le contenu est trop court */
+    }
+}
+
+
+.footer-content {
+display: flex;
+flex-direction: column;
+gap: 5px;
+}
+
+.footer-content a {
+color: #ffcc00;
+text-decoration: none;
+font-weight: bold;
+transition: color 0.3s ease;
+}
+
+.footer-content a:hover {
+color: #fff;
+text-decoration: underline;
+}
+
+
+.flag-icon {
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    align-self: flex-start;
+}
+
+.flag-icon:hover {
+    transform: scale(1.1);
+}
