@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    
+    <a href="{{ route('index') }}" class="return-text"><img src="https://cdn-icons-png.flaticon.com/128/2459/2459427.png">Return</a>
+
     <div class="main-content">
         <div class="video-container">
             <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="{{ $video->link }}"
@@ -19,66 +22,67 @@
                 </div>
             </blockquote>
         </div>
+
         <div class="text-wrapper">
-            <div class="polishText">
-                <h2>Polish text : </h2>
-                <p>{!! nl2br(e($video->polish_text)) !!}</p>
-            </div>
-            <div class="translationText">
-                <div class="translationTextUpper">
-                    <h2>Translated text : </h2>
-                    <p id="translationText">
-                        @if ($translation)
-                            {!! nl2br(e($translation->english_translation)) !!}
-                        @else
-                            No translation available.
-                        @endif
-                    </p>
-                    </p>
-
-                    <!-- Ajouter les boutons pour changer de traduction si la traduction française existe -->
-                    @if ($translation && $translation->french_translation)
-                        <div class="translation-buttons">
-                            <!-- Bouton pour afficher la traduction en anglais -->
-                            <img src="https://cdn-icons-png.flaticon.com/128/555/555417.png" alt="English"
-                                class="flag-icon" onclick="changeTranslation('english')">
-
-                            <!-- Bouton pour afficher la traduction en français -->
-                            <img src="https://cdn-icons-png.flaticon.com/512/206/206657.png" alt="Français"
-                                class="flag-icon" onclick="changeTranslation('french')">
-                        </div>
-                    @endif
-                </div>
+            <p class="video-title-video-page">{{ $video->display_name }}</p>
+        
+            <div id="accordion-text">
+                <!-- Accordéon : Texte polonais -->
+                <details class="accordion-item">
+                    <summary>Text</summary>
+                    <p>{!! nl2br(e($video->polish_text)) !!}</p>
+                </details>
+        
+                <!-- Accordéon : Traduction anglaise -->
+                @if ($translation && $translation->english_translation)
+                    <details class="accordion-item">
+                        <summary>Translation 1 (English)</summary>
+                        <p>{!! nl2br(e($translation->english_translation)) !!}</p>
+                    </details>
+                @endif
+        
+                <!-- Accordéon : Traduction française -->
+                @if ($translation && $translation->french_translation)
+                    <details class="accordion-item">
+                        <summary>Translation 2 (French)</summary>
+                        <p>{!! nl2br(e($translation->french_translation)) !!}</p>
+                    </details>
+                @endif
             </div>
         </div>
+        
+        
+
     </div>
 
-    <script>
-        function changeTranslation(language) {
-            const translationTextElement = document.getElementById('translationText');
-
-            if (language === 'english') {
-                @if ($translation)
-                    translationTextElement.innerHTML = `{{ $translation->english_translation }}`.replace(/\n/g, "<br>");
-                @endif
-            } else if (language === 'french') {
-                @if ($translation && $translation->french_translation)
-                    translationTextElement.innerHTML = `{{ $translation->french_translation }}`.replace(/\n/g, "<br>");
-                @endif
-            }
-        }
-    </script>
 
     <div class="tooltip"></div>
-    <div class = "footer">
-        <div class="footer-content">
-            <a href="https://www.flaticon.com/free-icons/uk-flag" title="uk flag icons">
-                🚩 UK flag icons created by Freepik - Flaticon
-            </a>
-            <a href="https://www.flaticon.com/free-icons/flag" title="flag icons">
-                🚩 FR Flag icons created by Freepik - Flaticon
-            </a>
+
+    <footer class="footer-custom-video-page">
+        <div class="footer-left-video-page">
+          <h2>Linguateka</h2>
+          <p>By Alexandre ESCOFFIER<br>and Karolina WINIARSKA</p>
         </div>
+      
+        <div class="footer-center-video-page">
+            <a href="{{ route('french.index') }}" class="footer-link-video-page">
+            <img src="https://flagcdn.com/fr.svg" alt="FR" class="flag-icon-video-page"> French Version
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+          </a>
+          <a href="{{ route('index') }}" class="footer-link-video-page">
+            <img src="https://flagcdn.com/pl.svg" alt="PL" class="flag-icon-video-page"> Polish Version
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#000000" viewBox="0 0 256 256"><path d="M200,64V168a8,8,0,0,1-16,0V83.31L69.66,197.66a8,8,0,0,1-11.32-11.32L172.69,72H88a8,8,0,0,1,0-16H192A8,8,0,0,1,200,64Z"></path></svg>
+          </a>
+        </div>
+
+        <div class="footer-right-video-page">
+            <a href="https://www.linkedin.com/in/alexandre-escoffier-077a9a1a3/" class="linkedin-link-video-page" target="_blank">
+              <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="linkedin-icon-video-page">
+             Linkedin
+            </a>
+          </div>
+      </footer>
+
         <script src="polish-videos.js"></script>
         <script src="video-loader.js"></script>
         <script async src="//www.instagram.com/embed.js"></script>

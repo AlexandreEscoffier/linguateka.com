@@ -1,87 +1,242 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-.card-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 15px;
+.main-text-videos-mobile {
+    display: none;
 }
 
-.card{
-    width: 300px;
-    height: 300px;
-    overflow: hidden;
-    padding: 5px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+.main-text-videos-desktop {
+    display: block;
+    margin-left: 18%;
+    margin-top: 80px;
 }
+
+.main-text-videos-desktop h2{
+    font-size: 15px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 100px 20px; /* Espace vertical 25px, espace horizontal 20px */
+    justify-content: center;
+    margin-top: 15px;
+    margin-left: 18%;
+    margin-right: 18%;
+}
+
+.card {
+    width: 200px;
+   /* height: 200px;*/
+    overflow: hidden;
+    /* Suppression du padding ici car l'espacement est géré par le gap */
+}
+
 
 .card img {
     width: 100%;
-    height: 100%;
+    height: 200px;
     object-fit: cover;
 }
 
-@media (max-width: 500px) {
-    .card {
-        width: 120px; 
-        height: 120px; 
-    }
+.video-title {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    font-weight: 500;
+}
+
+
+.top-controls {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 50px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 #searchBar {
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* Maintenu à 300px comme dans votre code original */
     padding: 10px;
-    margin: 20px auto;
-    display: block;
     border: 2px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 12px;
+    min-width: 350px;
+    
 }
 
 .lang-icon {
-    width: 40px;  /* Ajuste la taille de l'icône selon ton besoin */
+    width: 40px;  
     height: auto;
 }
+.footer-custom {
+    background-color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    gap: 30px;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    margin-top: 80px;
+  }
+  
+  .footer-left h2 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .footer-left p {
+    font-size: 14px;
+    margin: 4px 0 0;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .linkedin-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+  }
+  
+  .linkedin-icon {
+    width: 25px;
+    margin-right: 8px;
+  }
+  
+  .footer-center {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-link {
+    background-color: #dae2ff;
+    border-radius: 10px;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+    transition: background-color 0.3s;
+  }
+  
+  .footer-link:hover {
+    background-color: #c9d5ff;
+  }
+  
+  .flag-icon {
+    width: 20px;
+    height: 14px;
+  }
+  
+  .arrow {
+    margin-left: auto;
+  }
+  
 
-
-.footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px;
-    border-top: 3px solid #ffcc00;
-    width: 100%;
-    display: block;
-    position: relative;
-    margin-top: auto; /* Pousse le footer en bas si le contenu est trop court */
+.linguateka-logo {
+    display: flex;
+    justify-content: left, top;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 10px;
 }
 
-
-.footer-content {
-display: flex;
-flex-direction: column;
-gap: 5px;
+.linguateka-logo h1 {
+    font-size: 19px;
+    font-weight: bold;
 }
 
-.footer-content a {
-color: #ffcc00;
-text-decoration: none;
-font-weight: bold;
-transition: color 0.3s ease;
+.explanation {
+    margin-top: 22px;
+    margin-left: 18%;
 }
 
-.footer-content a:hover {
-color: #fff;
-text-decoration: underline;
+.explanation h1 {
+    font-size: 17px;
+    font-weight: 600;
 }
 
-@media (max-width: 699px) {
+.link-desktop {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #DAE2FF;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 12px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    min-width: 200px;
+}
+
+.link-desktop:hover {
+    background-color: #c9d5ff;
+}
+
+.link-desktop img {
+    width: 20px;
+    height: 20px;
+}
+
+.linguateka-logo {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+.link-mobile {
+    display: none;
+}
+
+/* Ajout de règles pour le responsive */
+@media (max-width: 1000px) {
+    .top-controls {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    .top-controls {
+        display: flex;
+        flex-direction: column-reverse; 
+    }
+
+    .explanation {
+        margin-top: 22px;
+        margin-left: 10px;
+    }
+
+    .main-text-videos-desktop {
+        margin-left: 8%;
+    }
+    
+    #searchBar {
+        max-width: 400px;
+    }
+
     .footer-content a {
         color: #ffcc00;
         text-decoration: none;
@@ -89,4 +244,192 @@ text-decoration: underline;
         transition: color 0.3s ease;
         font-size: 10px;
     }
+
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 50px 12px; /* Espacement réduit pour les petits écrans */
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+    
+    .card {
+        width: 200px; 
+    }
+
+    .card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 751px) {
+    .footer-custom {
+      min-height: 150px;
+    }
+  }
+
+@media (max-width: 750px) {
+
+    .main-text-videos-desktop {
+        display: none;
+    }
+
+    .main-text-videos-mobile {
+        display: block;
+    }
+
+    .main-text-videos-mobile h2{
+        font-size: 15px;
+    }
+   
+    .top-controls {
+        position: static; /* On enlève le positionnement absolu */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 30px;
+    }
+    
+    #searchBar {
+        order: 2;
+        min-width: unset;
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+        gap: 50px 12px; /* Espacement réduit pour les petits écrans */
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 20px;
+    }
+
+    .linguateka-logo {
+        margin-left: 10px;
+        gap: 20px;
+    }
+
+    .link-mobile {
+        display: block;
+    }
+
+    .link-mobile {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        background-color: #DAE2FF;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 6px 12px;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        color: black;
+        font-weight: 500;
+        min-width: 200px;
+    }
+
+    .link-mobile img {
+        width: 18px;
+        height: 18px;
+    }
+
+    .link-mobile:hover {
+        background-color: #c9d5ff;
+    }
+    
+    .card {
+        width: 170px; 
+    }
+
+    .card img {
+        width: 100%;
+        height: 170px;
+        object-fit: cover;
+    }
+
+    .link-desktop {
+        display: none;
+    }
+
+    .explanation {
+        margin-top: 35px;
+    }
+
+    .explanation h1 {
+        font-weight: 500;
+    }
+
+    .footer-custom {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        padding: 15px 10px;
+        gap: 15px;    
+      }
+    
+      .footer-center {
+        flex-direction: column;
+        width: 100%;
+        order : 3;
+      }
+
+      .footer-left {
+        order: 1;
+      }
+    
+      .footer-link {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 10px 12px;
+        width: 55%;
+        flex-wrap: nowrap;
+        overflow: hidden;
+        gap: 8px;
+      }
+      .footer-link span {
+        flex: 1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .footer-link svg {
+        flex-shrink: 0;
+      }
+      
+    
+      .footer-right {
+        order: 2;
+      }
+}
+
+@media (max-width: 370px) { 
+
+    .card-container {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 50px 12px; /* Espacement réduit pour les petits écrans */
+        margin-left: 3%;
+        margin-right: 3%;
+        margin-top: 20px;
+    }
+
+    .card {
+        width: 150px; 
+    }
+
+    .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+    }
+
+    .footer-link {
+        width: 60%;
+      }
+
 }

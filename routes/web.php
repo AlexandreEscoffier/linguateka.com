@@ -10,7 +10,7 @@ use App\Models\FrenchVideo;
 use App\Models\FrenchTranslation;
 
 // Page principale : vidéos polonaises
-Route::get('/', [PolishVideoController::class, 'index']);
+Route::get('/', [PolishVideoController::class, 'index'])->name('index');
 
 // Page individuelle vidéo polonaise
 Route::get('/polish-video/{id}', function ($id) {
