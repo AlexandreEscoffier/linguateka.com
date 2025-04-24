@@ -11,12 +11,14 @@ class FrenchVideo extends Model
 
     protected $fillable = [
         'name',
+        'display_name',
         'link',
         'french_text',
+        'tags'
     ];
 
     public function translation()
     {
-        return $this->hasOne(FrenchTranslation::class, 'video_id');
+        return $this->hasOne(FrenchTranslation::class, 'video_name', 'name');
     }
 }

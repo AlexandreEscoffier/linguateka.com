@@ -1,11 +1,38 @@
+@php
+    $specialWords = [
+        'kurwa' => 'insulte pas gentille',
+        'bajojajo' => "Aurevoir de façon infantine",
+    ];
+
+    function highlightSpecialWords(string $text, array $words): string
+{
+    foreach ($words as $word => $context) {
+        $escapedWord = preg_quote($word, '/');
+        $text = preg_replace_callback(
+            "/\b($escapedWord)\b/iu",
+            function ($match) use ($context) {
+                return '<a href="' . route('polish-vocabulary-road') . '#' . strtolower($match[0]) . '" class="tooltip-link">' . $match[0] . '<span class="tooltip-box">' . htmlspecialchars($context) . '</span></a>';
+            },
+            $text
+        );
+    }
+
+    return $text;
+}
+
+
+@endphp
+
+
 <!DOCTYPE html>
 <html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Embed</title>
+    <title>Video Embed - Linguateka</title>
     <link rel="stylesheet" href="{{ asset('css/style-polish-video-page.css') }}">
+    <link rel="icon" href="{{ asset('/others-images/linguateka-favicon.png') }}" type="image/png">
 </head>
 
 <body>
@@ -28,9 +55,10 @@
         
             <div id="accordion-text">
                 <!-- Accordéon : Texte polonais -->
+
                 <details class="accordion-item">
                     <summary>Text</summary>
-                    <p>{!! nl2br(e($video->polish_text)) !!}</p>
+                    <p>{!! nl2br(highlightSpecialWords(e($video->polish_text), $specialWords)) !!}</p>
                 </details>
         
                 <!-- Accordéon : Traduction anglaise -->
@@ -50,13 +78,7 @@
                 @endif
             </div>
         </div>
-        
-        
-
     </div>
-
-
-    <div class="tooltip"></div>
 
     <footer class="footer-custom-video-page">
         <div class="footer-left-video-page">
@@ -83,9 +105,9 @@
           </div>
       </footer>
 
-        <script src="polish-videos.js"></script>
-        <script src="video-loader.js"></script>
-        <script async src="//www.instagram.com/embed.js"></script>
+    <script src="polish-videos.js"></script>
+    <script src="video-loader.js"></script>
+    <script async src="//www.instagram.com/embed.js"></script>
 </body>
 
 </html>

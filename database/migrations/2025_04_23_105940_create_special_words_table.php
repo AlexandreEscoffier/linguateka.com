@@ -11,8 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('french_videos', function (Blueprint $table) {
+        Schema::create('special_words', function (Blueprint $table) {
             $table->id();
+            $table->string('word')->unique(); // le mot à détecter
+            $table->text('tooltip');          // le texte de l'infobulle
             $table->timestamps();
         });
     }
@@ -22,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('french_videos');
+        Schema::dropIfExists('special_words');
     }
 };

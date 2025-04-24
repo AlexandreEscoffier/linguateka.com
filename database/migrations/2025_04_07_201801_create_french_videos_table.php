@@ -13,6 +13,11 @@ return new class extends Migration
     {
         Schema::create('french_videos', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->unique();
+            $table->string('display_name')->nullable();
+            $table->text('link');
+            $table->text('french_text');
+            $table->text('tags')->nullable()->default(null);
             $table->timestamps();
         });
     }

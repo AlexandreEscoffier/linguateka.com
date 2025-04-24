@@ -1,340 +1,6 @@
-@media (max-width: 699px) {
-
-    .return-text {
-        margin-left: 5%;
-        text-decoration: none;
-        font-weight: bold;
-        color: #000;
-        margin-top: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .return-text img {
-        width: 18px;
-        margin-right: 5px
-    }
-
-    
-    .accordion-item summary {
-        font-size: 17px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .accordion-item {
-        margin-bottom: 40px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .video-title-video-page {
-        font-size: 20px;
-        font-weight: bold;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .polishText, .translationText {
-        max-width: 90%; /* Adaptation automatique */
-        margin: -40px auto;
-        padding: 10px;
-        text-align: left;
-        display: block;
-        word-wrap: break-word;
-        position: relative !important; /* Écrase le positionnement absolu */
-    }
-
-    .polishText h2, .translationTextUpper h2 {
-        font-size: 20px;
-    }
-
-    .polishText p, .translationText p {
-        color: #000080;
-        font-size: 17px;
-    }
-
-    .main-content {
-        display: flex;
-        flex-direction: column; /* Empile verticalement */
-        align-items: center; /* Centrage optionnel */
-        width: 100%;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .text-wrapper {
-        width: 90%; /* S'adapte à la largeur de l'écran */
-        margin-top: 20px;
-        margin-left: 0;
-        padding: 10px;
-    }
-
-    .video-container {
-        width: 100%;
-        max-width: 100%;
-        aspect-ratio: 6 / 9;
-    }
-
-    .video-container iframe {
-        width: 100%;
-        height: 100%;
-        transform: none; /* supprime le scale */
-    }
-
-    .video-wrapper {
-        padding-top: 75%
-      }
-      
-      .video-wrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-
-    @media (min-width: 751px) {
-        .footer-custom-video-page {
-          min-height: 150px;
-        }
-      }
-    }
-    
-    @media (max-width: 699px) {
-        .footer-custom-video-page {
-            background-color: #eee;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px;
-            gap: 30px;
-            flex-wrap: wrap;
-            font-family: sans-serif;
-        }
-    
-        .footer-left-video-page h2 {
-            font-size: 18px;
-            font-weight: bold;
-            margin: 0;
-        }
-    
-        .footer-left-video-page p {
-            font-size: 14px;
-            margin: 4px 0 0;
-        }
-    
-        .footer-right-video-page {
-            display: flex;
-            align-items: center;
-        }
-    
-        .linkedin-link-video-page {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            font-weight: bold;
-            color: black;
-        }
-    
-        .linkedin-icon-video-page {
-            width: 25px;
-            margin-right: 8px;
-        }
-    
-        .footer-center-video-page {
-            display: flex;
-            gap: 10px;
-        }
-    
-        .footer-link-video-page {
-            background-color: #dae2ff;
-            border-radius: 10px;
-            padding: 10px 12px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-weight: 500;
-            text-decoration: none;
-            color: black;
-            transition: background-color 0.3s;
-        }
-    
-        .footer-link-video-page:hover {
-            background-color: #c9d5ff;
-        }
-    
-        .flag-icon-video-page {
-            width: 20px;
-            height: 14px;
-        }
-    }
-    
-
-@media (min-width: 1200px) {
-
-    .return-text {
-        margin-left: 25%;
-        text-decoration: none;
-        font-weight: bold;
-        color: #000;
-        margin-top: 20px;
-    }
-
-    .return-text img {
-        width: 18px;
-        margin-right: 5px
-    }
-
-    .accordion-item summary {
-        font-size: 17px;
-        font-weight: bold;
-    }
-
-    .accordion-item {
-        margin-bottom: 40px;
-    }
-
-    .video-title-video-page {
-        font-size: 20px;
-        font-weight: bold;
-    }
-
-    /* Le body prend toute la hauteur de la fenêtre */
-    body {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh; /* Le body occupe toute la hauteur de la fenêtre */
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    /* Conteneur principal (vidéo et texte) */
-    .main-content {
-        display: flex;
-        flex: 1;
-        flex-direction: row; /* Dispose la vidéo et le texte côte à côte */
-        width: 50%;
-        margin-left: 25%;
-        margin-top: 10px;
-    }
-
-    /* Conteneur du texte */
-    .text-wrapper {
-        flex: 1; /* Permet au texte de prendre tout l'espace restant */
-        display: flex;
-        flex-direction: column; /* Les éléments sont empilés verticalement */
-        align-items: flex-start; /* Aligne les éléments à gauche */
-        gap: 20px; /* Espace entre les éléments */
-        padding: 10px; /* Espace intérieur */
-        max-width: 70%; /* Limite la largeur à 50% */
-        box-sizing: border-box;
-        overflow-y: auto; /* Permet le défilement si nécessaire */
-        margin-top: 20px;
-        margin-left: 20px;
-    }
-
-    /* Styles des divs à l'intérieur */
-    .polishText, .translationText {
-        max-width: 100%; /* Les divs prennent toute la largeur */
-        text-align: left;
-        margin: 0;
-    }
-
-    .polishText h2, .translationTextUpper h2 {
-        font-size: 26px; /* Taille des titres */
-        text-align: left;
-    }
-
-    .polishText p, .translationText p {
-        color: #000080;
-        font-size: 22px;
-    }
-
-    /* Vidéo responsive */
-    .video-container {
-        flex: 0 0 45%; /* La vidéo prend 50% de la largeur */
-        max-width: 600px; /* Limite la largeur de la vidéo */
-        height: 100%;
-        box-sizing: border-box;
-    }
-
-    .video-container iframe {
-        padding: 20px;
-        width: 100%;
-        height: 100%;
-        aspect-ratio: 9 / 12.3;
-       /* max-height: 105vh;*/
-    }
-
-    /* Footer */
-    .footer-custom-video-page {
-        background-color: #eee;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px;
-        gap: 30px;
-        flex-wrap: wrap;
-        font-family: sans-serif;
-        margin-top: 50px;
-      }
-      
-      .footer-left-video-page h2 {
-        font-size: 18px;
-        font-weight: bold;
-        margin: 0;
-      }
-      
-      .footer-left-video-page p {
-        font-size: 14px;
-        margin: 4px 0 0;
-      }
-      
-      .footer-right-video-page {
-        display: flex;
-        align-items: center;
-      }
-      
-      .linkedin-link-video-page {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        font-weight: bold;
-        color: black;
-      }
-      
-      .linkedin-icon-video-page {
-        width: 25px;
-        margin-right: 8px;
-      }
-      
-      .footer-center-video-page {
-        display: flex;
-        gap: 10px;
-      }
-      
-      .footer-link-video-page {
-        background-color: #dae2ff;
-        border-radius: 10px;
-        padding: 10px 12px;
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-weight: 500;
-        text-decoration: none;
-        color: black;
-        transition: background-color 0.3s;
-      }
-      
-      .footer-link-video-page:hover {
-        background-color: #c9d5ff;
-      }
-      
-      .flag-icon-video-page {
-        width: 20px;
-        height: 14px;
-      }
-}
-
-
+/* -----------------------------------
+   STYLES GLOBAUX (en dehors des media queries)
+----------------------------------- */
 
 .flag-icon {
     width: 32px;
@@ -348,41 +14,378 @@
     transform: scale(1.1);
 }
 
-/* Style des mots avec tooltip */
-.tooltip-word {
+
+.tooltip-link {
     position: relative;
-    color: #ff5733;
     font-weight: bold;
-    cursor: pointer;
-    border-bottom: 1px dotted #ff5733;
+    color: #c0392b;
+    text-decoration: none;
+    cursor: help;
 }
 
-/* Tooltip au survol */
-.tooltip-word::after {
-    content: attr(data-tooltip); /* Utilise l'attribut data-tooltip */
+.tooltip-box {
+    display: none;
     position: absolute;
-    background: rgba(0, 0, 0, 0.8);
-    color: white;
-    padding: 6px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    white-space: nowrap;
-    top: -30px; /* Décale au-dessus du mot */
+    top: 130%;
     left: 50%;
     transform: translateX(-50%);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+    background-color: white;
+    color: black;
+    padding: 12px 16px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    white-space: normal;
+    max-width: 250px;
+    z-index: 1000;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.4;
 }
 
-/* Affichage au survol */
-.tooltip-word:hover::after {
-    opacity: 1;
-    visibility: visible;
+.tooltip-link:hover .tooltip-box {
+    display: block;
 }
+
+
+
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Assure que le body occupe toute la hauteur de la fenêtre */
+    min-height: 100vh;
+}
+
+/* -----------------------------------
+   MEDIA QUERIES (max-width: 699px)
+----------------------------------- */
+
+@media (max-width: 699px) {
+    .return-text {
+        margin-left: 5%;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+        margin-top: 10px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .return-text img {
+        width: 18px;
+        margin-right: 5px;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    .video-container {
+        width: 100%;
+        max-width: 100%;
+        aspect-ratio: 6 / 9;
+    }
+
+    .video-container iframe {
+        width: 100%;
+        height: 100%;
+        transform: none;
+    }
+
+    .video-wrapper {
+        padding-top: 75%;
+    }
+
+    .video-wrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    .text-wrapper {
+        width: 90%;
+        margin-top: 20px;
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .video-title-video-page {
+        font-size: 20px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .accordion-item summary {
+        font-size: 17px;
+        font-weight: bold;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .accordion-item {
+        margin-bottom: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .polishText, .translationText {
+        max-width: 90%;
+        margin: -40px auto;
+        padding: 10px;
+        text-align: left;
+        display: block;
+        word-wrap: break-word;
+        position: relative !important;
+    }
+
+    .polishText h2, .translationTextUpper h2 {
+        font-size: 20px;
+    }
+
+    .polishText p, .translationText p {
+        color: #000080;
+        font-size: 17px;
+    }
+
+    .footer-custom-video-page {
+        background-color: #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+        gap: 30px;
+        flex-wrap: wrap;
+        font-family: sans-serif;
+    }
+
+    .footer-left-video-page h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .footer-left-video-page p {
+        font-size: 14px;
+        margin: 4px 0 0;
+    }
+
+    .footer-right-video-page {
+        display: flex;
+        align-items: center;
+    }
+
+    .linkedin-link-video-page {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    .linkedin-icon-video-page {
+        width: 25px;
+        margin-right: 8px;
+    }
+
+    .footer-center-video-page {
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer-link-video-page {
+        background-color: #dae2ff;
+        border-radius: 10px;
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.3s;
+    }
+
+    .footer-link-video-page:hover {
+        background-color: #c9d5ff;
+    }
+
+    .flag-icon-video-page {
+        width: 20px;
+        height: 14px;
+    }
+}
+
+/* -----------------------------------
+   MEDIA QUERIES (min-width: 751px)
+----------------------------------- */
+
+@media (min-width: 751px) {
+    .footer-custom-video-page {
+        min-height: 150px;
+    }
+}
+
+/* -----------------------------------
+   MEDIA QUERIES (min-width: 1200px)
+----------------------------------- */
+
+@media (min-width: 1200px) {
+    .return-text {
+        margin-left: 25%;
+        text-decoration: none;
+        font-weight: bold;
+        color: #000;
+        margin-top: 20px;
+    }
+
+    .return-text img {
+        width: 18px;
+        margin-right: 5px;
+    }
+
+    .accordion-item summary {
+        font-size: 17px;
+        font-weight: bold;
+    }
+
+    .accordion-item {
+        margin-bottom: 40px;
+    }
+
+    .video-title-video-page {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    body {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .main-content {
+        display: flex;
+        flex: 1;
+        flex-direction: row;
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 10px;
+    }
+
+    .text-wrapper {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        padding: 10px;
+        max-width: 70%;
+        box-sizing: border-box;
+        overflow-y: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .polishText, .translationText {
+        max-width: 100%;
+        text-align: left;
+        margin: 0;
+    }
+
+    .polishText h2, .translationTextUpper h2 {
+        font-size: 26px;
+        text-align: left;
+    }
+
+    .polishText p, .translationText p {
+        color: #000080;
+        font-size: 22px;
+    }
+
+    .video-container {
+        flex: 0 0 45%;
+        max-width: 600px;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .video-container iframe {
+        padding: 20px;
+        width: 100%;
+        height: 100%;
+        aspect-ratio: 9 / 12.3;
+    }
+
+    .footer-custom-video-page {
+        background-color: #eee;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px;
+        gap: 30px;
+        flex-wrap: wrap;
+        font-family: sans-serif;
+        margin-top: 50px;
+    }
+
+    .footer-left-video-page h2 {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 0;
+    }
+
+    .footer-left-video-page p {
+        font-size: 14px;
+        margin: 4px 0 0;
+    }
+
+    .footer-right-video-page {
+        display: flex;
+        align-items: center;
+    }
+
+    .linkedin-link-video-page {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+    }
+
+    .linkedin-icon-video-page {
+        width: 25px;
+        margin-right: 8px;
+    }
+
+    .footer-center-video-page {
+        display: flex;
+        gap: 10px;
+    }
+
+    .footer-link-video-page {
+        background-color: #dae2ff;
+        border-radius: 10px;
+        padding: 10px 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.3s;
+    }
+
+    .footer-link-video-page:hover {
+        background-color: #c9d5ff;
+    }
+
+    .flag-icon-video-page {
+        width: 20px;
+        height: 14px;
+    }
 }

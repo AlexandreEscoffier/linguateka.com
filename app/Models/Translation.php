@@ -10,16 +10,13 @@ class Translation extends Model
     use HasFactory;
 
     protected $fillable = [
-        'video_id',  // Associe la traduction à une vidéo via son ID
-        'english_translation',  // Traduction en anglais
-        'french_translation',  // Traduction en français
+        'video_name',
+        'english_translation',
+        'french_translation',
     ];
 
-
-    // Relation avec le modèle Video (si tu l'as)
     public function video()
     {
-        return $this->belongsTo(PolishVideo::class, 'video_id');
+        return $this->belongsTo(PolishVideo::class, 'video_name', 'name');
     }
-
 }

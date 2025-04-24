@@ -5,6 +5,58 @@
     font-family: sans-serif;
 }
 
+
+.linguateka-logo {
+    display: flex;
+    justify-content: left, top;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.linguateka-logo h1 {
+    font-size: 22px;
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #3B82F6, #06B6D4);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-top: 25px;
+    margin-left: 10px;
+}
+
+.linguateka-logo-image {
+    margin-left: 5px;
+    width: 47px;
+}
+
+.explanation-mobile {
+    display: none;
+}
+
+.explanation {
+    margin-top: 22px;
+    margin-left: 18%;
+    display: block;
+}
+
+.explanation h1 {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: capitalize;
+}
+
+.second-main-text-mobile {
+    display: none;
+}
+
+.top-controls-mobile {
+    display: none;
+}
+
 .main-text-videos-mobile {
     display: none;
 }
@@ -19,12 +71,178 @@
     font-size: 15px;
 }
 
+.no-results-message {
+    display: none; 
+    text-align: center; 
+    margin-top: 40px;
+}
+
+.no-results-message p{
+    font-size: 1.2em; 
+    font-weight: bold;
+}
+
+.no-results-message img {
+    width: 100px; 
+    height: auto; 
+    margin-bottom: 20px;
+}
+
+.filter-icon-button {
+    width: 35px; 
+    height: 35px;    
+    border-style : none;
+    border-left-style : none;
+}
+
+.filter-icon-button-mobile {
+    width: 35px; 
+    height: 35px;    
+    border-style : none;
+    border-left-style : none;
+}
+
+.filter-wrapper {
+    display: inline-block;
+    position: relative;
+    margin-left: 10px;
+    border-style: none;
+}
+
+.filter-wrapper-mobile {
+    display: none;
+}
+
+.filter-wrapper button {
+    border-style: none;
+}
+
+.filter-wrapper-mobile button {
+    border-style: none;
+}
+
+#filter-panel {
+    position: absolute;
+    top: 45px;
+    right: 0;
+    background-color: #f5f7ff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    width: 180px;
+}
+
+#filter-panel-mobile {
+    position: absolute;
+    top: 46px;
+    background-color: #f5f7ff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    width: 180px;
+}
+
+#filter-panel.hidden {
+    display: none;
+}
+
+#filter-panel-mobile.hidden {
+    display: none;
+}
+
+.difficulty-filter {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.difficulty-filter-mobile {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.difficulty-btn {
+    flex: 1;
+    padding: 5px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.difficulty-btn-mobile {
+    flex: 1;
+    padding: 5px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.difficulty-btn.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
+
+.difficulty-btn-mobile.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
+
+.tag-btn {
+    flex: 1;
+    padding: 5px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 3px;
+}
+
+.tag-btn.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+}
+
+.tag-btn-mobile {
+    flex: 1;
+    padding: 5px;
+    background: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+    margin-top: 3px;
+    min-width: 100px;
+}
+
+.tag-btn-mobile.active {
+    background-color: #007BFF;
+    color: white;
+    border-color: #0056b3;
+
+}
+
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 100px 20px; /* Espace vertical 25px, espace horizontal 20px */
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 35px;
     margin-left: 18%;
     margin-right: 18%;
 }
@@ -34,6 +252,17 @@
    /* height: 200px;*/
     overflow: hidden;
     /* Suppression du padding ici car l'espacement est géré par le gap */
+}
+
+.top-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    padding: 10px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
 }
 
 
@@ -52,15 +281,127 @@
 }
 
 
-.top-controls {
+.combo-box {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    gap: 50px;
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    background-color: #dae2ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
+
+.combo-box-mobile {
+    display: flex;
+    align-items: center;
+    background-color: #dae2ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.compact-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    background-color: transparent;
+    border: none;
+    border-right: 1px solid #c2ccf2;
+}
+
+.separator {
+    width: 1px;
+    background-color: #333;
+    height: 30px;
+}
+
+.separator-mobile {
+    width: 1px;
+    background-color: #333;
+    height: 30px;
+}
+
+.burger-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.burger-wrapper-mobile {
+    display: flex;
+    align-items: center;
+    margin-left: 3px;
+}
+
+.burger-wrapper button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000;
+}
+
+.burger-wrapper-mobile button {
+    background-color: transparent;
+    border: none;
+    padding: 8px 12px;
+    font-size: 18px;
+    cursor: pointer;
+    color: #000;
+}
+
+#burger-content {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #f5f7ff;
+    border: 1px solid #dae2ff;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+#burger-mobile-content {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background-color: #f5f7ff;
+    border: 1px solid #dae2ff;
+    border-radius: 8px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+
+#burger-content a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+#burger-mobile-content a {
+    display: block;
+    padding: 8px 0;
+    text-decoration: none;
+    color: #333;
+}
+
+#burger-content a:hover {
+    text-decoration: underline;
+}
+
+#burger-mobile-content a:hover {
+    text-decoration: underline;
+}
+
+
 
 #searchBar {
     width: 100%;
@@ -70,6 +411,11 @@
     border-radius: 5px;
     font-size: 12px;
     min-width: 350px;
+    
+}
+
+#searchBar-mobile {
+   display: none;
     
 }
 
@@ -150,42 +496,19 @@
   }
   
 
-.linguateka-logo {
-    display: flex;
-    justify-content: left, top;
-    flex-wrap: wrap;
-    margin-top: 15px;
-    margin-left: 10px;
-}
-
-.linguateka-logo h1 {
-    font-size: 19px;
-    font-weight: bold;
-}
-
-.explanation {
-    margin-top: 22px;
-    margin-left: 18%;
-}
-
-.explanation h1 {
-    font-size: 17px;
-    font-weight: 600;
-}
-
 .link-desktop {
     display: flex;
     align-items: center;
     gap: 8px;
     background-color: #DAE2FF;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+ /*   border: 1px solid #ccc;
+    border-radius: 6px;*/
     padding: 6px 12px;
     transition: background-color 0.3s ease;
     text-decoration: none;
     color: black;
     font-weight: 500;
-    min-width: 200px;
+    min-width: 165px;
 }
 
 .link-desktop:hover {
@@ -271,35 +594,127 @@
 
 @media (max-width: 750px) {
 
+    .linguateka-logo {
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        margin-left: 10px;
+    }
+    
+    .linguateka-logo h1 {
+        font-size: 15px;
+    
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+        background: linear-gradient(to right, #3B82F6, #06B6D4);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        margin-top: 10px;
+    }
+    
+    .linguateka-logo-image {
+        width: 30px;
+    }
+
+    .explanation-mobile {
+        display: block;
+    }
+
+    .explanation-mobile h1 {
+        font-size: 14px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+        margin-top: 25px;
+    }
+
+    .second-main-text-mobile {
+        display: block;
+        order: -1; /* pour la faire apparaître avant les autres dans un conteneur flex si besoin */
+        margin-left: 10px;
+      }
+
+    .second-main-text-mobile h2 {
+        font-size: 15px; 
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-top: 15px;
+    }
+
+    .no-results-message img {
+        width: 70px; 
+        height: auto; 
+        margin-bottom: 20px;
+    }
+    
+    .explanation {
+        display: none;
+    }
+
+    .combo-box {
+        display: none;
+    }
+
+    .combo-box-mobile {
+        max-width: 250px;
+        position: absolute;
+        justify-content: flex-end;
+        top: 13px;
+        right: 5px;
+    }
+
     .main-text-videos-desktop {
         display: none;
+    }
+
+    .top-controls {
+        display: none;
+    }
+
+    .top-controls-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; /* pour que les éléments prennent toute la largeur */
+        gap: 12px;
+        margin: 30px 3%;
+      }
+
+      .filter-wrapper-mobile {
+        display: inline-block;
+        position: absolute;
+        margin-left: 0; /* collé à gauche */
+        border-style: none;
+        margin-top: 60px;
+      }
+
+    .filter-wrapper-mobile button {
+        width: 35px;
+        height: 35px;
     }
 
     .main-text-videos-mobile {
         display: block;
     }
-
-    .main-text-videos-mobile h2{
-        font-size: 15px;
-    }
-   
-    .top-controls {
-        position: static; /* On enlève le positionnement absolu */
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        margin-left: 3%;
-        margin-right: 3%;
-        margin-top: 30px;
-    }
     
     #searchBar {
-        order: 2;
-        min-width: unset;
-        width: 100%;
-        max-width: 100%;
+        display: none;
     }
+
+    #searchBar-mobile {
+        display: block;
+        width: 85%; 
+        padding: 10px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        font-size: 12px;
+        min-width: unset;
+        box-sizing: border-box;
+        margin-left: auto; 
+        margin-top: 7px;
+
+      }
     
     .card-container {
         grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
@@ -311,7 +726,7 @@
 
     .linguateka-logo {
         margin-left: 10px;
-        gap: 20px;
+        gap: 6px;
     }
 
     .link-mobile {
@@ -323,14 +738,17 @@
         align-items: center;
         gap: 8px;
         background-color: #DAE2FF;
-        border: 1px solid #ccc;
         border-radius: 6px;
-        padding: 6px 12px;
+        padding: 6px 9px;
         transition: background-color 0.3s ease;
         text-decoration: none;
-        color: black;
-        font-weight: 500;
-        min-width: 200px;
+        color: rgb(46, 46, 46);
+        font-weight: 600;
+        min-width: 100px;
+    }
+
+    .link-mobile-span span {
+        font-size: 13px;
     }
 
     .link-mobile img {

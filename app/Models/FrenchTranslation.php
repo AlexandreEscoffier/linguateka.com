@@ -10,7 +10,7 @@ class FrenchTranslation extends Model
     use HasFactory;
 
     protected $fillable = [
-        'video_id',  // Associe la traduction à une vidéo via son ID
+        'video_name', //associe video grace au nom
         'english_translation',  // Traduction en anglais
         'polish_translation',  // Traduction en polonais
     ];
@@ -19,6 +19,6 @@ class FrenchTranslation extends Model
     // Relation avec le modèle Video (si tu l'as)
     public function video()
     {
-        return $this->belongsTo(PolishVideo::class, 'video_id');
+        return $this->belongsTo(FrenchVideo::class, 'video_name', 'name');
     }
 }
